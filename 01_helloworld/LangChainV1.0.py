@@ -2,8 +2,7 @@ import os
 from dotenv import load_dotenv
 from langchain.chat_models import init_chat_model
 
-
-# .env文件读取
+# 读取环境变量
 load_dotenv()
 
 # 实例化模型
@@ -14,7 +13,12 @@ model = init_chat_model(
     base_url="https://api.deepseek.com"
 )
 
+# 消息列表
+messages = "你是谁"
+
 # 调用模型
-print(model.__dict__)
-print(model.invoke("你是谁").content)
+response = model.invoke(messages)
+
+# 打印结果
+print(response.content)
 
