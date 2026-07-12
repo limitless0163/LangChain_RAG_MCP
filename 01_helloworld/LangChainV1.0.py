@@ -1,8 +1,6 @@
-# langchain 1.0+ 版本使用方式，目前主流，多模型共存
-
+import os
 from dotenv import load_dotenv
 from langchain.chat_models import init_chat_model
-import os
 
 
 # .env文件读取
