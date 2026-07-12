@@ -3,9 +3,9 @@ from langchain_openai import ChatOpenAI
 
 
 model = ChatOpenAI(
+    model="deepseek-v4-flash",
     api_key=os.getenv("deepseek-api"),
-    base_url="https://api.deepseek.com",
-    model="deepseek-v4-flash"
+    base_url="https://api.deepseek.com"
 )
 
 messages = [

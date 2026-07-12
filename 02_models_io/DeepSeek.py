@@ -3,8 +3,8 @@ from langchain_deepseek import ChatDeepSeek
 
 
 model = ChatDeepSeek(
-    api_key=os.getenv("deepseek-api"),
     model="deepseek-v4-flash",
+    api_key=os.getenv("deepseek-api"),
     temperature=0,
     max_tokens=None,
     timeout=None,
