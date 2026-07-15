@@ -11,7 +11,7 @@ from loguru import logger
 REDIS_URL = "redis://localhost:6379"
 
 # 创建原生Redis客户端, decode_responses 控制 Redis 返回数据的类型：False 返字节串，True 返字符串
-redis_client = redis.Redis.from_url(REDIS_URL, decode_response=True)
+redis_client = redis.Redis.from_url(REDIS_URL, decode_responses=True)
 
 # 初始化模型
 model = init_chat_model(
