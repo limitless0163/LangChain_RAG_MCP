@@ -2,14 +2,14 @@
 
 本项目是我在学习 **LangChain**、**RAG**、**MCP** 和 **AI Agent** 过程中记录的代码，按照主题分 12 个章节循序渐进。
 
-> LLM 供应商：DeepSeek（主力）、阿里云 DashScope（嵌入）、Ollama（本地模型）
+> LLM 供应商：DeepSeek、阿里云 DashScope、Ollama
 
 ## 目录结构
 
 ```
 ├── 01_helloworld/    入门与环境配置
 ├── 02_models/        模型初始化与多供应商
-├── 03_ollama/        本地模型（Ollama）
+├── 03_ollama/        本地模型
 ├── 04_prompt/        提示词工程
 ├── 05_parser/        输出解析器
 ├── 06_lcel/          LCEL 链式表达式
@@ -40,11 +40,11 @@
 
 ## 技术栈
 
-- **LLM**: DeepSeek（`langchain-openai` 兼容接口）、阿里千问（`langchain-community` Tongyi）、Ollama 本地
-- **嵌入**: 阿里云 DashScope `text-embedding-v4`
-- **向量存储**: Redis（`langchain-redis`）
+- **LLM**: DeepSeek、阿里千问、Ollama 本地
+- **嵌入**: 阿里云 DashScope
+- **向量存储**: Redis
 - **记忆**: Redis / InMemory
-- **MCP**: `mcp[cli]` FastMCP + 自定义 SSE Server
+- **MCP**: FastMCP + 自定义 SSE Server
 - **文档解析**: PyMuPDF、docx2txt、CSV/JSON/Markdown loaders
 - **校验**: Pydantic v2 + TypedDict
 
@@ -60,13 +60,13 @@ deepseek-api=你的DeepSeek API密钥
 ## 学习路线
 
 ```
-01 → 02 → 03      基础：环境、模型、本地部署
-      ↓
-   04 → 05 → 06   核心：提示词 → 解析 → 链式编排
-      ↓
-   07 → 08        进阶：记忆系统 + 工具调用
-      ↓
-   09 → 10        实战：嵌入 → 向量库 → RAG 完整流水线
-      ↓
-   11 → 12        前沿：MCP 协议 + Agent 智能体
+01 → 02 → 03   基础：环境、模型、本地部署
+   ↓
+04 → 05 → 06   核心：提示词 → 解析 → 链式编排
+   ↓
+07 → 08        进阶：记忆系统 + 工具调用
+   ↓
+09 → 10        实战：嵌入 → 向量库 → RAG 完整流水线
+   ↓
+11 → 12        前沿：MCP 协议 + Agent 智能体
 ```
