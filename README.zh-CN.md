@@ -1,6 +1,14 @@
+<div align="center">
+
 # LangChain RAG MCP — 学习代码
 
+</div>
+
+<div align="center">
+
 [English](README.md) | **简体中文**
+
+</div>
 
 本项目是我在学习 **LangChain**、**RAG**、**MCP** 和 **AI Agent** 过程中记录的代码，按照主题分为 12 个章节，内容由浅入深。
 

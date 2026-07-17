@@ -1,6 +1,14 @@
+<div align="center">
+
 # LangChain RAG MCP — Learning Examples
 
+</div>
+
+<div align="center">
+
 **English** | [简体中文](README.zh-CN.md)
+
+</div>
 
 This repository contains the code examples I created while learning **LangChain**, **RAG**, **MCP**, and **AI Agents**. The content is organized into 12 chapters that progress from fundamentals to advanced topics.
 
