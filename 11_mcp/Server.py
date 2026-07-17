@@ -1,6 +1,5 @@
 import json
 import httpx
-import os
 from loguru import logger
 
 
@@ -43,19 +42,27 @@ def get_weather(city: str) -> str:
     """
     查询指定城市的即时天气信息
     参数 city: 城市英文名
-    返回: OpenWeather API 的 JSON 字符串
+    返回: 天气数据的 JSON 字符串
     """
-    url = "https://api.openweathermap.org/data/2.5/weather"
-    params = {
-        "q": city,
-        "appid": os.getenv("OPENWEATHER_API_KEY"),
-        "units": "metric",  # 使用摄氏度
-        "lang": "zh_cn" # 输出语言为简体中文
-    }
-    resp = httpx.get(url, params=params, timeout=10)
+    url = f"https://wttr.in/{city}"
+    params = {"format": "j1"}
+    headers = {"Accept-Language": "zh-CN"}
+    resp = httpx.get(url, params=params, headers=headers, timeout=10)
+    resp.raise_for_status()
     data = resp.json()
-    logger.info(f"查询 {city} 天气结果：{data}")
-    return json.dumps(data, ensure_ascii=False)
+
+    # 提取关键字段，返回精简 JSON
+    current = data["current_condition"][0]
+    result = {
+        "city": city,
+        "temperature_c": current["temp_C"],
+        "humidity_pct": current["humidity"],
+        "weather_desc": current["weatherDesc"][0]["value"],
+        "feels_like_c": current["FeelsLikeC"],
+        "wind_speed_kmph": current["windspeedKmph"],
+    }
+    logger.info(f"查询 {city} 天气结果：{result}")
+    return json.dumps(result, ensure_ascii=False)
 
 if __name__ == "__main__":
     logger.info("启动 MCP SSE 天气服务器，监听 http://127.0.0.1:8000/sse")
