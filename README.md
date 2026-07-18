@@ -1,6 +1,6 @@
 <div align="center">
 
-# LangChain RAG MCP — Learning Examples
+# LangChain RAG MCP
 
 </div>
 
@@ -65,18 +65,4 @@ Create a `.env` file in the project root:
 ```env
 DASHSCOPE_API_KEY=your_aliyun_dashscope_api_key
 deepseek-api=your_deepseek_api_key
-```
-
-## Learning Path
-
-```text
-01 → 02 → 03   Fundamentals: environment, models, and local deployment
-   ↓
-04 → 05 → 06   Core concepts: prompts → parsing → chain composition
-   ↓
-07 → 08        Advanced topics: memory systems + tool calling
-   ↓
-09 → 10        Practice: embeddings → vector stores → complete RAG pipeline
-   ↓
-11 → 12        Emerging topics: MCP + AI Agents
 ```

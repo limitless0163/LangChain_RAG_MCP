@@ -1,6 +1,6 @@
 <div align="center">
 
-# LangChain RAG MCP — 学习代码
+# LangChain RAG MCP
 
 </div>
 
@@ -65,18 +65,4 @@
 ```env
 DASHSCOPE_API_KEY=你的阿里云DashScope密钥
 deepseek-api=你的DeepSeek_API密钥
-```
-
-## 学习路线
-
-```text
-01 → 02 → 03   基础：环境、模型、本地部署
-   ↓
-04 → 05 → 06   核心：提示词 → 解析 → 链式编排
-   ↓
-07 → 08        进阶：记忆系统 + 工具调用
-   ↓
-09 → 10        实战：嵌入 → 向量库 → RAG 完整流水线
-   ↓
-11 → 12        前沿：MCP 协议 + Agent 智能体
 ```
