@@ -32,11 +32,3 @@ This repository contains the code I wrote while learning **LangChain**. It is or
 └── 12_agent/              # Agent patterns: ReAct, tool selection strategies
 ```
 
-## Environment Variables
-
-Create a `.env` file in the project root:
-
-```env
-deepseek-api=your_deepseek_api_key
-DASHSCOPE_API_KEY=your_alibaba_cloud_dashscope_api_key
-```

@@ -32,11 +32,3 @@
 └── 12_agent/              # Agent 模式：ReAct、工具选择策略
 ```
 
-## 环境变量
-
-在项目根目录创建 `.env` 文件：
-
-```env
-deepseek-api=你的DeepSeek_API密钥
-DASHSCOPE_API_KEY=你的阿里云DashScope_API密钥
-```
